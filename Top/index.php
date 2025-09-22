@@ -1,0 +1,2275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Tickets &gt;Manage - Powered by SupportSuite</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+        <link rel="stylesheet" type="text/css" media="all" href="https://support.bytro.com/staff/index.php?_ca=css"/>
+        <script language="Javascript">
+            var themepath = "https://support.bytro.com/themes/admin_default/";
+            var swiftpath = "https://support.bytro.com/";
+            var appenurl = "";
+            var BLANK_IMAGE = "https://support.bytro.com/themes/admin_default/space.gif";
+            var swiftsessionid = "4gyhobjdqhrjsblzkf2yvbpy7ai2fbt2";
+            var swiftiswinapp = "0";
+            var cparea = "staff";
+        </script>
+        <script type="text/javascript" src="https://support.bytro.com/themes/admin_default/main.js?v=2"></script>
+        <script type="text/javascript" src="/includes/jquery-1.4.2/jquery-1.4.2.js"></script>
+        <script type="text/javascript" src="/includes/jquery-1.4.2/ui/jquery.ui.core.js"></script>
+        <script type="text/javascript" src="/includes/jquery-1.4.2/ui/jquery.ui.widget.js"></script>
+        <script type="text/javascript" src="/includes/jquery-1.4.2/ui/jquery.ui.position.js"></script>
+        <script type="text/javascript" src="/includes/jquery-1.4.2/ui/jquery.ui.autocomplete.js"></script>
+        <script type="text/javascript" src="/extensions/SupUserAutocomplete.js"></script>
+        <script type="text/javascript" src="/includes/jquery-1.4.2/editable.js"></script>
+        <link type="text/css" href="/includes/jquery-1.4.2/themes/smoothness/jquery-ui.css?v=1" rel="stylesheet"/>
+        <script type="text/javascript" src="https://support.bytro.com/locale/en-us/staffmenu.js"></script>
+        <script type="text/javascript" src="https://support.bytro.com/includes/overLIB/overlib.js"></script>
+        <script type="text/javascript" src="https://support.bytro.com/includes/overLIB/overlib_exclusive.js"></script>
+        <script type="text/javascript" src="https://support.bytro.com/files/tic6scwplijikcy63zdqsczn2ydztd14.js"></script>
+        <script type="text/javascript"></script>
+        <script type="text/javascript" src="https://support.bytro.com/cache/staffcpmenu185c29dc24325934ee377cfda20e414cclick.js"></script>
+        <script language="Javascript">
+            //HTMLArea.loadPlugin("TableOperations");
+            function loadAllData() {
+                preloadMenuImages();
+                var irsField = browserObject("staffirs");
+                if (irsField) {
+                    window.$IRS = globalirs = new IRSAutoComplete(document.getElementById('staffirs'));
+                }
+            }
+        </script>
+    </head>
+    <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" background="https://support.bytro.com/themes/admin_default/bgblocks.gif" onLoad="javascript:loadAllData();">
+        <script language="Javascript">
+            var swticketdepartments = swmenulist = new Array();
+            swticketdepartments = [['s1914_en_bug-beta', '142', '1'], ['GGS_Fraud', '182', '0'], ['GGS_Payment', '181', '0'], ['internal_reporting', '53', '0'], ['s1914_intl_payment', '51', '0'], ['s1914_ticket_escalation', '76', '0'], ['s1914_pt_general', '20', '0'], ['s1914_it_general', '23', '0'], ['s1914_ru_general', '29', '0'], ['s1914_en_general', '1', '0'], ['s1914_tr_general', '40', '0'], ['s1914_nl_general', '18', '0'], ['s1914_fr_general', '6', '0'], ['s1914_de_general', '4', '0'], ['s1914_pl_general', '10', '0'], ['s1914_es_general', '8', '0'], ['ww2_en_reports', '247', '0'], ['ww2_en_bug-beta', '141', '0'], ['ww2_ticket_escalation', '95', '0'], ['ww2_intl_payment', '71', '0'], ['ww2_en_general', '70', '0'], ['ww2_de_general', '72', '0'], ['ww2_es_general', '78', '0'], ['ww2_fr_general', '81', '0'], ['ww2_it_general', '79', '0'], ['ww2_nl_general', '82', '0'], ['ww2_pl_general', '77', '0'], ['ww2_pt_general', '80', '0'], ['ww2_ru_general', '99', '0'], ['ww2_cs_general', '102', '0'], ['ww2_tr_general', '179', '0'], ['s1914_en_reports', '248', '0'], ['bytro_multiaccounting', '253', '0'], ['bytro_tournaments', '254', '0'], ['con_ja_general', '256', '0'], ['s1914_en_chat', '214', '0'], ['s1914_de_chat', '215', '0'], ['s1914_es_chat', '216', '0'], ['s1914_fr_chat', '217', '0'], ['s1914_it_chat', '218', '0'], ['s1914_pl_chat', '219', '0'], ['s1914_pt_chat', '220', '0'], ['s1914_ru_chat', '221', '0'], ['s1914_cs_chat', '252', '0'], ['s1914_customer_support', '188', '0'], ['ww2_customer_support', '189', '0'], ['s1914_tr_chat', '222', '0'], ['s1914_el_chat', '223', '0'], ['con_customer_support', '190', '0'], ['s1914_nl_chat', '224', '0'], ['tgw_Customer_Support', '202', '0'], ['tgw_ticket_escalation', '192', '0'], ['ww2_en_chat', '225', '0'], ['tgw_intl_payment', '213', '0'], ['ww2_de_chat', '226', '0'], ['tgw_de_general', '193', '0'], ['tgw_en_general', '191', '0'], ['ww2_es_chat', '227', '0'], ['tgw_es_general', '194', '0'], ['ww2_fr_chat', '228', '0'], ['tgw_fr_general', '195', '0'], ['tgw_nl_general', '196', '0'], ['ww2_it_chat', '229', '0'], ['tgw_it_general', '197', '0'], ['ww2_pl_chat', '230', '0'], ['tgw_pl_general', '198', '0'], ['ww2_pt_chat', '231', '0'], ['ww2_ru_chat', '232', '0'], ['tgw_pt_general', '199', '0'], ['ww2_tr_chat', '233', '0'], ['tgw_ru_general', '200', '0'], ['ww2_nl_chat', '234', '0'], ['tgw_tr_general', '201', '0'], ['ww2_cs_chat', '235', '0'], ['ww2_ja_chat', '236', '0'], ['tgw_en_chat', '237', '0'], ['tgw_de_chat', '238', '0'], ['tgw_es_chat', '239', '0'], ['tgw_fr_chat', '240', '0'], ['tgw_it_chat', '241', '0'], ['tgw_pl_chat', '242', '0'], ['tgw_pt_chat', '243', '0'], ['tgw_ru_chat', '244', '0'], ['tgw_tr_chat', '245', '0'], ['tgw_nl_chat', '246', '0'], ['con_de_payment', '162', '0'], ['con_en_payment', '159', '0'], ['de_bugtracker', '69', '0'], ['con_ar_general', '251', '0'], ['con_ar_payment', '249', '0'], ['con_ja_payment', '255', '0'], ['con_ar_multi', '250', '0'], ['con_de_general', '160', '0'], ['con_de_multi', '161', '0'], ['con_en_bug-beta', '156', '0'], ['con_en_general', '157', '0'], ['con_en_multi', '158', '0'], ['con_es_general', '167', '0'], ['con_es_multi', '169', '0'], ['con_fr_general', '166', '0'], ['con_fr_multi', '170', '0'], ['con_it_general', '168', '0'], ['con_it_multi', '171', '0'], ['con_pl_general', '164', '0'], ['con_pl_multi', '165', '0'], ['con_ru_general', '172', '0'], ['con_ru_multi', '173', '0'], ['con_tr_general', '174', '0'], ['con_tr_multi', '175', '0'], ['con_pt_general', '183', '0'], ['con_pt_multi', '184', '0'], ['con_cz_general', '186', '0'], ['con_cz_multi', '187', '0'], ];
+            swmenulist = [['dpreferences', 'MENU_PREFERENCES'], ['ticketsearch', 'MENU_TICKETSEARCH'], ['ticketpred', 'MENU_TICKETPRED'], ['ticketalerts', 'MENU_TICKETALERTS'], ['reportt', 'MENU_T_REPORTS'], ];
+            buildMainMenus();
+            var MENU_TICKETVIEWS = [{
+                "popup": 1,
+                "popupoff": [0, 0],
+                "pos": [0, 0],
+                "zindex": 50,
+                "size": [22, 180],
+                "itemoff": [21, 0],
+                "leveloff": [10, 59],
+                "delay": 1000,
+                "style": VSTYLE,
+                "imgsize": [20, 17],
+                dynamic: true,
+                https_fix_blank_doc: themepath + 'blank.html'
+            }, {
+                code: "General Due Asc",
+                "format": {
+                    "leveloff": [5, 179],
+                    "image": themepath + "menu_ticketview.gif",
+                    "oimage": themepath + "menu_ticketview.gif",
+                    "imgsize": [20, 22],
+                    "style": VSTYLESEL
+                },
+                url: "index.php?_m=tickets&_a=manage&ticketviewid=111&departmentid=&ticketstatusid=&ticketsearchid=&ticketlabelid="
+            }, {
+                code: "General Last Activity Desc",
+                "format": {
+                    "leveloff": [5, 179],
+                    "image": themepath + "menu_ticketview.gif",
+                    "oimage": themepath + "menu_ticketview.gif",
+                    "imgsize": [20, 22],
+                    "style": VSTYLE
+                },
+                url: "index.php?_m=tickets&_a=manage&ticketviewid=112&departmentid=&ticketstatusid=&ticketsearchid=&ticketlabelid="
+            }, {
+                code: "All Tickets Due Asc",
+                "format": {
+                    "leveloff": [5, 179],
+                    "image": themepath + "menu_ticketview.gif",
+                    "oimage": themepath + "menu_ticketview.gif",
+                    "imgsize": [20, 22],
+                    "style": VSTYLE
+                },
+                url: "index.php?_m=tickets&_a=manage&ticketviewid=113&departmentid=&ticketstatusid=&ticketsearchid=&ticketlabelid="
+            }, {
+                code: "All Tickets Last Activity Desc",
+                "format": {
+                    "leveloff": [5, 179],
+                    "image": themepath + "menu_ticketview.gif",
+                    "oimage": themepath + "menu_ticketview.gif",
+                    "imgsize": [20, 22],
+                    "style": VSTYLE
+                },
+                url: "index.php?_m=tickets&_a=manage&ticketviewid=114&departmentid=&ticketstatusid=&ticketsearchid=&ticketlabelid="
+            }, {
+                code: "Dorado Guest ",
+                "format": {
+                    "leveloff": [5, 179],
+                    "image": themepath + "menu_ticketview.gif",
+                    "oimage": themepath + "menu_ticketview.gif",
+                    "imgsize": [20, 22],
+                    "style": VSTYLE
+                },
+                url: "index.php?_m=tickets&_a=manage&ticketviewid=129&departmentid=&ticketstatusid=&ticketsearchid=&ticketlabelid="
+            }, {
+                code: "View Options",
+                "format": {
+                    "leveloff": [5, 179],
+                    "image": themepath + "menu_ticketviewoptions.gif",
+                    "oimage": themepath + "menu_ticketviewoptions.gif",
+                    "imgsize": [20, 22],
+                    "arrow": themepath + "icon_rightarrowgray.gif",
+                    "oarrow": themepath + "icon_rightarrowgray.gif",
+                    "arrsize": [10, 10]
+                },
+                url: "javascript:void(0);",
+                sub: [{
+                    "leveloff": [0, 179]
+                }, {
+                    code: "Edit View",
+                    url: "index.php?_m=tickets&_a=editticketview&ticketviewid=111&departmentid=&ticketstatusid=&ticketsearchid=&ticketlabelid=",
+                    "format": {
+                        "itemoff": [0, 0],
+                        "size": [23, 180],
+                        "image": themepath + "menu_ticketviewoptions.gif",
+                        "oimage": themepath + "menu_ticketviewoptions.gif",
+                        "style": VSTYLEBORDER
+                    }
+                }, {
+                    code: "Delete View",
+                    url: "index.php?_m=tickets&_a=delticketview&ticketviewid=111&departmentid=&ticketstatusid=&ticketsearchid=&ticketlabelid=",
+                    "format": {
+                        "itemoff": [22, 0],
+                        "image": themepath + "menu_delticketview.gif",
+                        "oimage": themepath + "menu_delticketview.gif",
+                        "style": VSTYLE
+                    }
+                }, {
+                    code: "RSS Feed",
+                    url: "https://support.bytro.com/rss/index.php?_m=tickets&_a=rss&ticketviewid=111&departmentid=&ticketstatusid=",
+                    "target": "_blank",
+                    "format": {
+                        "size": [23, 180],
+                        "imgsize": [20, 30],
+                        "image": themepath + "menu_rss.gif",
+                        "oimage": themepath + "menu_rss.gif",
+                        "style": VSTYLE
+                    }
+                }]
+            }, {
+                code: "New View",
+                "format": {
+                    "leveloff": [5, 179],
+                    "image": themepath + "menu_newticketview.gif",
+                    "oimage": themepath + "menu_newticketview.gif",
+                    "imgsize": [20, 22]
+                },
+                url: "index.php?_m=tickets&_a=newticketview&departmentid=&ticketstatusid=&ticketsearchid=&ticketlabelid="
+            }];
+            var tviewmenu = new COOLjsMenuPRO("tviewmenu",MENU_TICKETVIEWS);
+            var tviewmenuloaded = true;
+            tviewmenu.initTop();
+            tviewmenu.init();
+
+            buildTicketViewMenus('New Label', 'Delete Label', '', '', '0');
+        </script>
+        <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td rowspan="2" width="25%" align="left" valign="middle">
+                                <a href="index.php?_m=core&_a=dashboard">
+                                    <img src="https://support.bytro.com/themes/admin_default/supportsuite.gif" border="0">
+                                </a>
+                            </td>
+                            <td width="35%" align="center">
+                                <span class="smalltext">
+                                    <form name="searchuserform" action="index.php?_m=typo3users&_a=viewuserdetails" method="post">
+                                        Search Bytro User
+    			<input type="text" name="searchuser" id="searchuser" maxlength="256" style="z-index: 500;">
+                                        <input type="submit" name="searchusersubmit" value="Find">
+                                    </form>
+                                </span>
+                            </td>
+                            <td align="right" valign="top">
+                                <span class="smalltext">
+                                    <input type="textbox" name="staffirs" id="staffirs" class="staffcpirs" autocomplete="off"/>
+                                </span>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td align="right" valign="bottom">
+                                <span class="smalltext">
+                                    <font color="#333333">
+                                        Logged In: Mozzarella Master | <a href="https://support.bytro.com/index.php" title="Support Center" target="_blank">Support Center</a>
+                                        | <a href="https://support.bytro.com/admin/index.php" title="Admin CP" target="_blank">Admin CP</a>
+                                    </font>
+                                    | 
+                                    <a href="https://support.bytro.com/staff/index.php?_ca=logout" id="blue" title="Logout">
+                                        <strong>Logout</strong>
+                                    </a>
+                                    &nbsp;
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr height="4">
+                <td>
+                    <img src="https://support.bytro.com/themes/admin_default/space.gif" width="1" height="4">
+                </td>
+            </tr>
+            <tr height="1">
+                <td bgcolor="#C6C3C6">
+                    <img src="https://support.bytro.com/themes/admin_default/space.gif" width="1" height="1">
+                </td>
+            </tr>
+            <tr height="4">
+                <td bgcolor="#F0F0F0">
+                    <img src="https://support.bytro.com/themes/admin_default/space.gif" width="1" height="4">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <script language="Javascript">
+                        var swmenubg1 = "menudefbg";
+                        var swmenubg2 = "menusectiondefault";
+                        var swtabmenutype = "onClick";
+                        var swtabmenu = new Array();
+                        var swtabmenucolspan = '8';
+                        var swtabselmenu = '2';
+                        var swtabselmenuclass = '2';
+                        swtabmenu = [['1', '80', '1', 'Home'], ['2', '100', '2', 'Tickets'], ['8', '120', '3', 'Teamwork'], ['9', '90', '4', 'Users'], ['10', '140', '5', 'BytroGames Users'], ['11', '140', '6', 'Alliances'], ];
+                        buildTopTabMenu();
+                    </script>
+                </td>
+            </tr>
+            <tr height="1">
+                <td bgcolor="#C6C3C6" colspan="6" id="popupRef">
+                    <img src="https://support.bytro.com/themes/admin_default/space.gif" width="1" height="1">
+                </td>
+            </tr>
+            <script language="Javascript">
+                switchTab(2, 2);
+            </script>
+            <tr height="400">
+                <td valign="top" align="left">
+                    <table border="0" cellspacing="0" cellpadding="0" width="100%" height="400">
+                        <tr>
+                            <td width="145" valign="top" align="left" bgcolor="#F0EADE" class="staffnavbar">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                                    <tr height="1">
+                                        <td>
+                                            <img src="https://support.bytro.com/themes/admin_default/space.gif" border="0" width="145" height="1">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="navsection">
+                                                <div class="navsub">
+                                                    <div class="navtitle">
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td align="left" valign="top">
+                                                                    <img src="https://support.bytro.com/themes/admin_default/doublearrowsnav.gif" align="absmiddle" border="0"/>&nbsp;Filter Tickets
+                                                                </td>
+                                                                <td align="right" valign="top">
+                                                                    <a href="javascript:void(0);" onClick="javascript:oT_1.expandAllNodes();">
+                                                                        <img src="https://support.bytro.com/themes/admin_default/icon_expand.gif" align="absmiddle" border="0"/>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <script language="javascript" type="text/javascript">
+                                                        oT_1 = new TreeMenu("https://support.bytro.com/themes/admin_default","oT_1","_self","treeMenuDefault",true,false);
+                                                        n = oT_1.addItem(new TreeNode('&nbsp;View All','icon_folderblue2.gif','index.php?_m=tickets&_a=manage',false,true,'','','icon_folderblue2.gif'));
+                                                        n = oT_1.addItem(new TreeNode('&nbsp;Filters','icon_funnel.gif','index.php?_m=tickets&_a=manage',false,true,'','','icon_funnel.gif'));
+                                                        n_1 = n.addItem(new TreeNode('&nbsp;Dolphin','icon_treefilteritem.gif','index.php?_m=tickets&_a=runfilter&ticketfilterid=140',false,true,'','','icon_treefilteritem.gif'));
+                                                        n_2 = n.addItem(new TreeNode('&nbsp;GoldFish','icon_treefilteritem.gif','index.php?_m=tickets&_a=runfilter&ticketfilterid=139',false,true,'','','icon_treefilteritem.gif'));
+                                                        n_3 = n.addItem(new TreeNode('&nbsp;Whale','icon_treefilteritem.gif','index.php?_m=tickets&_a=runfilter&ticketfilterid=141',false,true,'','','icon_treefilteritem.gif'));
+                                                        n = oT_1.addItem(new TreeNode('&nbsp;Labels','icon_labels.gif','index.php?_m=tickets&_a=manage',false,true,'','','icon_labels.gif'));
+                                                        n_1 = n.addItem(new TreeNode('&nbsp;2109601&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=29',false,true,'','','icon_label.gif'));
+                                                        n_2 = n.addItem(new TreeNode('&nbsp;36897978&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=45',false,true,'','','icon_label.gif'));
+                                                        n_3 = n.addItem(new TreeNode('&nbsp;closed&nbsp;<font color=\'darkgreen\'>(303)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=28',false,true,'','','icon_label.gif'));
+                                                        n_4 = n.addItem(new TreeNode('&nbsp;closed&nbsp;<font color=\'darkgreen\'>(211)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=34',false,true,'','','icon_label.gif'));
+                                                        n_5 = n.addItem(new TreeNode('&nbsp;crocked legs&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=57',false,true,'','','icon_label.gif'));
+                                                        n_6 = n.addItem(new TreeNode('&nbsp;development&nbsp;<font color=\'darkgreen\'>(61)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=6',false,true,'','','icon_label.gif'));
+                                                        n_7 = n.addItem(new TreeNode('&nbsp;dolphin&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=40',false,true,'','','icon_label.gif'));
+                                                        n_8 = n.addItem(new TreeNode('&nbsp;Evil_king 14&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=51',false,true,'','','icon_label.gif'));
+                                                        n_9 = n.addItem(new TreeNode('&nbsp;Full Name&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=36',false,true,'','','icon_label.gif'));
+                                                        n_10 = n.addItem(new TreeNode('&nbsp;Gobe&nbsp;<font color=\'darkgreen\'>(1)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=21',false,true,'','','icon_label.gif'));
+                                                        n_11 = n.addItem(new TreeNode('&nbsp;green&nbsp;<font color=\'darkgreen\'>(4)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=17',false,true,'','','icon_label.gif'));
+                                                        n_12 = n.addItem(new TreeNode('&nbsp;Green Flag&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=44',false,true,'','','icon_label.gif'));
+                                                        n_13 = n.addItem(new TreeNode('&nbsp;GYM-959535&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=35',false,true,'','','icon_label.gif'));
+                                                        n_14 = n.addItem(new TreeNode('&nbsp;hakanakyol6767@gmail.com&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=39',false,true,'','','icon_label.gif'));
+                                                        n_15 = n.addItem(new TreeNode('&nbsp;it_dev&nbsp;<font color=\'darkgreen\'>(37)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=7',false,true,'','','icon_label.gif'));
+                                                        n_16 = n.addItem(new TreeNode('&nbsp;it_multi&nbsp;<font color=\'darkgreen\'>(123)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=8',false,true,'','','icon_label.gif'));
+                                                        n_17 = n.addItem(new TreeNode('&nbsp;kongo&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=18',false,true,'','','icon_label.gif'));
+                                                        n_18 = n.addItem(new TreeNode('&nbsp;luke&nbsp;<font color=\'darkgreen\'>(1)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=20',false,true,'','','icon_label.gif'));
+                                                        n_19 = n.addItem(new TreeNode('&nbsp;Manser&nbsp;<font color=\'darkgreen\'>(2)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=33',false,true,'','','icon_label.gif'));
+                                                        n_20 = n.addItem(new TreeNode('&nbsp;Mass Action&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=42',false,true,'','','icon_label.gif'));
+                                                        n_21 = n.addItem(new TreeNode('&nbsp;MCB-901236&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=52',false,true,'','','icon_label.gif'));
+                                                        n_22 = n.addItem(new TreeNode('&nbsp;Mihail&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=25',false,true,'','','icon_label.gif'));
+                                                        n_23 = n.addItem(new TreeNode('&nbsp;neto br&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=56',false,true,'','','icon_label.gif'));
+                                                        n_24 = n.addItem(new TreeNode('&nbsp;none&nbsp;<font color=\'darkgreen\'>(1)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=41',false,true,'','','icon_label.gif'));
+                                                        n_25 = n.addItem(new TreeNode('&nbsp;NUF-747280&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=38',false,true,'','','icon_label.gif'));
+                                                        n_26 = n.addItem(new TreeNode('&nbsp;Overdue&nbsp;<font color=\'darkgreen\'>(1131)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=27',false,true,'','','icon_label.gif'));
+                                                        n_27 = n.addItem(new TreeNode('&nbsp;Payment&nbsp;<font color=\'darkgreen\'>(131)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=1',false,true,'','','icon_label.gif'));
+                                                        n_28 = n.addItem(new TreeNode('&nbsp;payment&nbsp;<font color=\'darkgreen\'>(15)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=23',false,true,'','','icon_label.gif'));
+                                                        n_29 = n.addItem(new TreeNode('&nbsp;perma banned DE&nbsp;<font color=\'darkgreen\'>(16)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=30',false,true,'','','icon_label.gif'));
+                                                        n_30 = n.addItem(new TreeNode('&nbsp;player&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=46',false,true,'','','icon_label.gif'));
+                                                        n_31 = n.addItem(new TreeNode('&nbsp;Priority&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=50',false,true,'','','icon_label.gif'));
+                                                        n_32 = n.addItem(new TreeNode('&nbsp;red&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=37',false,true,'','','icon_label.gif'));
+                                                        n_33 = n.addItem(new TreeNode('&nbsp;reported&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=47',false,true,'','','icon_label.gif'));
+                                                        n_34 = n.addItem(new TreeNode('&nbsp;reported image&nbsp;<font color=\'darkgreen\'>(4)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=15',false,true,'','','icon_label.gif'));
+                                                        n_35 = n.addItem(new TreeNode('&nbsp;rmb&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=32',false,true,'','','icon_label.gif'));
+                                                        n_36 = n.addItem(new TreeNode('&nbsp;RNX-331364&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=54',false,true,'','','icon_label.gif'));
+                                                        n_37 = n.addItem(new TreeNode('&nbsp;Seyhbedreddin&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=26',false,true,'','','icon_label.gif'));
+                                                        n_38 = n.addItem(new TreeNode('&nbsp;supremacy&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=43',false,true,'','','icon_label.gif'));
+                                                        n_39 = n.addItem(new TreeNode('&nbsp;Test&nbsp;<font color=\'darkgreen\'>(2)</font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=24',false,true,'','','icon_label.gif'));
+                                                        n_40 = n.addItem(new TreeNode('&nbsp;TyronKR&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=55',false,true,'','','icon_label.gif'));
+                                                        n_41 = n.addItem(new TreeNode('&nbsp;VCM-416099&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=53',false,true,'','','icon_label.gif'));
+                                                        n_42 = n.addItem(new TreeNode('&nbsp;wilhand&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=19',false,true,'','','icon_label.gif'));
+                                                        n_43 = n.addItem(new TreeNode('&nbsp;XxEllxX&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=16',false,true,'','','icon_label.gif'));
+                                                        n_44 = n.addItem(new TreeNode('&nbsp;закрыто&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=49',false,true,'','','icon_label.gif'));
+                                                        n_45 = n.addItem(new TreeNode('&nbsp;Холодная война Empire RP&nbsp;<font color=\'darkgreen\'></font>','icon_label.gif','index.php?_m=tickets&_a=manage&ticketlabelid=48',false,true,'','','icon_label.gif'));
+                                                        n = oT_1.addItem(new TreeNode('&nbsp;bytro_multiaccounting&nbsp;','icon_folderred.gif','index.php?_m=tickets&_a=manage&departmentid=253&ticketstatusid=0',false,true,'','','icon_folderred.gif'));
+                                                        n_1 = n.addItem(new TreeNode('&nbsp;Open&nbsp;<font color=\'darkgreen\'>(23)</font>','icon_yellowbigdot.gif','index.php?_m=tickets&_a=manage&departmentid=253&ticketstatusid=1',false,true,'','','icon_yellowbigdot.gif'));
+                                                        n_2 = n.addItem(new TreeNode('&nbsp;Pending&nbsp;<font color=\'darkgreen\'></font>','icon_yellowbigdot.gif','index.php?_m=tickets&_a=manage&departmentid=253&ticketstatusid=4',false,true,'','','icon_yellowbigdot.gif'));
+                                                        n_3 = n.addItem(new TreeNode('&nbsp;On Hold&nbsp;<font color=\'darkgreen\'>(12)</font>','icon_yellowbigdot.gif','index.php?_m=tickets&_a=manage&departmentid=253&ticketstatusid=2',false,true,'','','icon_yellowbigdot.gif'));
+                                                        n_4 = n.addItem(new TreeNode('&nbsp;Closed&nbsp;<font color=\'darkgreen\'></font>','icon_redbigdot.gif','index.php?_m=tickets&_a=manage&departmentid=253&ticketstatusid=3',false,true,'','','icon_redbigdot.gif'));
+                                                        n = oT_1.addItem(new TreeNode('&nbsp;bytro_tournaments&nbsp;','icon_folderblue2.gif','index.php?_m=tickets&_a=manage&departmentid=254&ticketstatusid=0',false,true,'','','icon_folderblue2.gif'));
+                                                        n_1 = n.addItem(new TreeNode('&nbsp;Open&nbsp;<font color=\'darkgreen\'>(1)</font>','icon_yellowbigdot.gif','index.php?_m=tickets&_a=manage&departmentid=254&ticketstatusid=1',false,true,'','','icon_yellowbigdot.gif'));
+                                                        n_2 = n.addItem(new TreeNode('&nbsp;Pending&nbsp;<font color=\'darkgreen\'></font>','icon_yellowbigdot.gif','index.php?_m=tickets&_a=manage&departmentid=254&ticketstatusid=4',false,true,'','','icon_yellowbigdot.gif'));
+                                                        n_3 = n.addItem(new TreeNode('&nbsp;On Hold&nbsp;<font color=\'darkgreen\'></font>','icon_yellowbigdot.gif','index.php?_m=tickets&_a=manage&departmentid=254&ticketstatusid=2',false,true,'','','icon_yellowbigdot.gif'));
+                                                        n_4 = n.addItem(new TreeNode('&nbsp;Closed&nbsp;<font color=\'darkgreen\'></font>','icon_yellowbigdot.gif','index.php?_m=tickets&_a=manage&departmentid=254&ticketstatusid=3',false,true,'','','icon_yellowbigdot.gif'));
+
+                                                        oT_1.drawMenu();
+                                                        oT_1.writeOutput('');
+                                                        oT_1.resetBranches();
+                                                    </script>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="navsection">
+                                                <div class="navsub">
+                                                    <div class="navtitle">
+                                                        <img src="https://support.bytro.com/themes/admin_default/doublearrowsnav.gif" align="absmiddle" border="0"/>&nbsp;Online Staff
+                                                    </div>
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                                                        <tr class="smalltext" onMouseOver="this.className='hlrow';" onMouseOut="this.className='smalltext';" style="CURSOR: pointer;" onClick="javascript:window.location.href='index.php?_m=core&_a=composeprvmsg&staffid=1395';" title="Staff CP">
+                                                            <td width="1">
+                                                                <img src="https://support.bytro.com/themes/admin_default/icon_onlineyellow.gif">
+                                                            </td>
+                                                            <td>Mozzarella Master</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="1" valign="top" align="left" bgcolor="#CDCDCD">
+                                <img src="https://support.bytro.com/themes/admin_default/space.gif" width="1" height="1">
+                            </td>
+                            <td width="8" valign="top" align="left">
+                                <img src="https://support.bytro.com/themes/admin_default/space.gif" width="8" height="1">
+                            </td>
+                            <td valign="top" align="left" width="100%">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr height="8">
+                                        <td>
+                                            <img src="https://support.bytro.com/themes/admin_default/space.gif" height="8" width="1" border="0"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="5" valign="middle" align="left">
+                                            <img src="https://support.bytro.com/themes/admin_default/doublearrowsnav.gif">
+                                        </td>
+                                        <td width="100%">
+                                            <span class="smalltext">
+                                                &nbsp;<a href="index.php?_m=tickets&_a=manage" title="Manage">Manage</a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr height="4">
+                                        <td colspan="2">
+                                            <img src="https://support.bytro.com/themes/admin_default/space.gif" height="4" width="1">
+                                        </td>
+                                    </tr>
+                                    <tr height="1">
+                                        <td colspan="2" bgcolor="#CCCCCC">
+                                            <img src="https://support.bytro.com/themes/admin_default/space.gif" height="1" width="1">
+                                        </td>
+                                    </tr>
+                                    <tr height="4">
+                                        <td colspan="2">
+                                            <img src="https://support.bytro.com/themes/admin_default/space.gif" height="4" width="1">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <span class="smalltext"></span>
+                                        </td>
+                                    </tr>
+                                    <tr height="4">
+                                        <td colspan="2">
+                                            <img src="https://support.bytro.com/themes/admin_default/space.gif" height="4" width="1">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <script language="Javascript">
+                                                var isTicketList = true;
+                                            </script>
+                                            <form name="ticketlist" id="ticketlist" action="index.php" method="POST">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td>
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" id="tmenuref">
+                                                                <tr valign="top">
+                                                                    <td align="left">
+                                                                        <table border="0" cellpadding="0" cellspacing="1" class="tborder">
+                                                                            <tr>
+                                                                                <td class="highlightpage">Page 1 of 1</td>
+                                                                                <td class="navpageselected" nowrap>
+                                                                                    <a id="tviewlink" onClick="javascript:CustomPopupRef('tviewmenu', event, 'tviewlink', 'tviewmenu', 'tmenuref', tviewmenuloaded);this.blur();" onMouseUp="javascript:this.blur();" href="#" title="Views">
+                                                                                        Views &nbsp;<img align="absmiddle" src="https://support.bytro.com/themes/admin_default/menudrop.gif" border="0"/>
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="navpageselected" nowrap>
+                                                                                    <a id="tlabellink" onClick="javascript:CustomPopupRef('tlabelmenu', event, 'tlabellink', 'tlabelmenu', 'tmenuref', tlabelmenuloaded);this.blur();" onMouseUp="javascript:this.blur();" href="#" title="Labels">
+                                                                                        Labels &nbsp;<img align="absmiddle" src="https://support.bytro.com/themes/admin_default/menudrop.gif" border="0"/>
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="navpageselected" nowrap>
+                                                                                    <a onClick="javascript:switchDisplay('trmassaction');" href="#" title="Mass Action">Mass Action</a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td width="100%" align="right" valign="middle" width="1">
+                                                                        <input type="text" name="s_query" class="quicksearch" value=""/>
+                                                                    </td>
+                                                                    <td width="1">
+                                                                        <img src="https://support.bytro.com/themes/admin_default/space.gif" width="4" height="1"/>
+                                                                    </td>
+                                                                    <td width="100%" align="right" valign="middle" width="1">
+                                                                        <select name="searchfield" class="quicksearch">
+                                                                            <option value="ticketid">Ticket ID</option>
+                                                                            <option value="lastreplier">Last Replier</option>
+                                                                            <option value="contents" selected>Messages</option>
+                                                                            <option value="subject">Subject</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td width="1">
+                                                                        <img src="https://support.bytro.com/themes/admin_default/space.gif" width="4" height="1"/>
+                                                                    </td>
+                                                                    <td align="right" width="1">
+                                                                        <table border="0" cellpadding="0" cellspacing="1" class="tborder">
+                                                                            <tr>
+                                                                                <td class="navpageselected" nowrap>
+                                                                                    <a href="javascript:document.ticketlist.submit();" title="Quick Search">Quick Search</a>
+                                                                                </td>
+                                                                                <td class="navpageselected" nowrap>
+                                                                                    <a onclick="javascript:displayGridTabData('ticketlist', false);hideTabOn('gridoptticketlist', 'settings');" href="#" title="Options">Options</a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                    </tr>
+                                        </td>
+                                    <tr>
+                                        <td>
+                                            <img src="https://support.bytro.com/themes/admin_default/space.gif" width="1" height="6"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table cellspacing="0" cellpadding="0" border="0" width="100%" style="border-collapse: collapse;width: 100%; height: 100%;DISPLAY: none;" id="gridtableoptticketlist">
+                                                <tr style="height: 1em">
+                                                    <td align="left">
+                                                        <div id="gridoptticketlist">
+                                                            <ul id="tab">
+                                                                <li>
+                                                                    <a href="#" class="currenttab" onClick="this.blur(); return switchGridTab('settings', 'gridoptions');" id="settings" title="Settings">Settings</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr style="height: 1em">
+                                                    <td align="left">
+                                                        <div id="tab_settings" style="DISPLAY: none;" class="tabcontent">
+                                                            <table border="0" cellpadding="3" cellspacing="1" class="tborder" width="100%">
+                                                                <tr class="row2" title="" onmouseover="" onmouseout="" onclick="" id="autorefresh" style="">
+                                                                    <td class="row2" align="left" valign="top" colspan="" width="50%">
+                                                                        <span class="tabletitle">Auto Refresh Grid</span>
+                                                                        <BR/>
+                                                                        <span class="tabledescription">The ticket listing can be set to automatically refresh after a certain interval of time.</span>
+                                                                    </td>
+                                                                    <td class="row2" align="left" valign="top" colspan="" width="">
+                                                                        <select name="autorefresh" class="swiftselect">
+                                                                            <option value="0" selected>--&nbsp;Disable &nbsp;Auto &nbsp;Refresh &nbsp;--</option>
+                                                                            <option value="30">Every &nbsp;30 &nbsp;Seconds</option>
+                                                                            <option value="60">Every &nbsp;1 &nbsp;Minute</option>
+                                                                            <option value="300">Every &nbsp;5 &nbsp;Minutes</option>
+                                                                            <option value="900">Every &nbsp;15 &nbsp;Minutes</option>
+                                                                            <option value="1800">Every &nbsp;30 &nbsp;Minutes</option>
+                                                                            <option value="3600">Every &nbsp;1 &nbsp;Hour</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="row1" title="" onmouseover="" onmouseout="" onclick="" id="" style="">
+                                                                    <td class="row1" align="left" valign="top" colspan="" width="50%">
+                                                                        <span class="tabletitle">Open Tickets In A Separate Window</span>
+                                                                        <BR/>
+                                                                        <span class="tabledescription">If enabled, tickets will be opened in a new browser window.</span>
+                                                                    </td>
+                                                                    <td class="row1" align="left" valign="top" colspan="" width="">
+                                                                        <label for="yopennewwindow">
+                                                                            <input type="radio" name="opennewwindow" class="swiftradio" onClick="" id="yopennewwindow" value="1"/>Yes
+                                                                        </label>
+                                                                        <label for="nopennewwindow">
+                                                                            <input type="radio" name="opennewwindow" onClick="" id="nopennewwindow" value="0" checked/>No
+                                                                        </label>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="descrow" title="" onmouseover="" onmouseout="" onclick="" id="" style="">
+                                                                    <td class="descrow" align="left" valign="top" colspan="2" width="">Post Reply Options</td>
+                                                                </tr>
+                                                                <tr class="row2" title="" onmouseover="" onmouseout="" onclick="" id="replynav" style="">
+                                                                    <td class="row2" align="left" valign="top" colspan="" width="50%">
+                                                                        <span class="tabletitle">After Replying Take Me To</span>
+                                                                        <BR/>
+                                                                        <span class="tabledescription">Select the area that SupportSuite should take you to after you replying to a ticket.</span>
+                                                                    </td>
+                                                                    <td class="row2" align="left" valign="top" colspan="" width="">
+                                                                        <select name="replynav" class="swiftselect">
+                                                                            <option value="0" selected>Ticket &nbsp;List</option>
+                                                                            <option value="1">Ticket</option>
+                                                                            <option value="2">Next &nbsp;Ticket</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="row1" title="" onmouseover="" onmouseout="" onclick="" id="rnticketstatusid" style="">
+                                                                    <td class="row1" align="left" valign="top" colspan="" width="50%">
+                                                                        <span class="tabletitle">Default Ticket Status When Replying</span>
+                                                                        <BR/>
+                                                                        <span class="tabledescription">
+                                                                            Select the status to which tickets should be set to after you have made a reply.<br/>
+                                                                            <br/>
+                                                                            <i>Note:</i>
+                                                                            This setting does <b>not</b>
+                                                                            apply to replies made from your e-mail client.
+                                                                        </span>
+                                                                    </td>
+                                                                    <td class="row1" align="left" valign="top" colspan="" width="">
+                                                                        <select name="rnticketstatusid" class="swiftselect">
+                                                                            <option value="0" selected>--&nbsp;Unspecified &nbsp;--</option>
+                                                                            <option value="1">Open</option>
+                                                                            <option value="4">Pending</option>
+                                                                            <option value="2">On &nbsp;Hold</option>
+                                                                            <option value="3">Closed</option>
+                                                                        </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="row2" title="" onmouseover="" onmouseout="" onclick="" id="" style="">
+                                                                    <td class="row2" align="left" valign="top" colspan="" width="50%">
+                                                                        <span class="tabletitle">Select Owner As Current User</span>
+                                                                        <BR/>
+                                                                        <span class="tabledescription">If enabled, the ticket will automatically be assigned to the last staff user to reply.</span>
+                                                                    </td>
+                                                                    <td class="row2" align="left" valign="top" colspan="" width="">
+                                                                        <label for="yrnsetowner">
+                                                                            <input type="radio" name="rnsetowner" class="swiftradio" onClick="" id="yrnsetowner" value="1"/>Yes
+                                                                        </label>
+                                                                        <label for="nrnsetowner">
+                                                                            <input type="radio" name="rnsetowner" onClick="" id="nrnsetowner" value="0" checked/>No
+                                                                        </label>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="row1" title="" onmouseover="" onmouseout="" onclick="" id="" style="">
+                                                                    <td class="row1" align="center" valign="middle" colspan="2" width="">
+                                                                        <input type="submit" id="submitbutton" name="submitbutton" class="yellowbutton" value="Update"/>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <BR/>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="tborder" style="float: left; position: relative;">
+                                                <thead>
+                                                    <tr>
+                                                        <td class="tcat" width="1" align="left" nowrap>
+                                                            <img src="https://support.bytro.com/themes/admin_default/space.gif" width="4" height="21">
+                                                        </td>
+                                                        <td class="tcat" width="100%" colspan="" align="left" nowrap>Ticket List (General Due Asc)</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="contenttableborder" colspan="2">
+                                                            <table border="0" cellpadding="3" cellspacing="1" width="100%">
+                                                                <tr>
+                                                                    <td class="tabletitlerow" align="center" valign="middle" width=20 nowrap>
+                                                                        <input type="checkbox" name="allselect" class="swiftcheckbox" onClick="javascript:toggleAll(document.ticketlist);displayObject('trmassaction');">
+                                                                    </td>
+                                                                    <td class="tabletitlerow" width="18" align="center" nowrap>
+                                                                        &nbsp;
+                                                                        <a href="index.php?_m=tickets&_a=manage&sortby=t-flagtype&sortorder=asc&ticketlabelid=0&departmentid=0&ticketstatusid=0&ticketsearchid=0" title="Sort Ascending">
+                                                                            <img src="https://support.bytro.com/themes/admin_default/space.gif" border="0"/>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="tabletitlerow" width="80" align="center" nowrap>
+                                                                        &nbsp;<a href="index.php?_m=tickets&_a=manage&sortby=t-ticketid&sortorder=asc&ticketlabelid=0&departmentid=0&ticketstatusid=0&ticketsearchid=0" title="Sort Ascending">Ticket ID</a>
+                                                                    </td>
+                                                                    <td class="tabletitlerow" width="160" align="center" nowrap>
+                                                                        &nbsp;
+                                                                        <a href="index.php?_m=tickets&_a=manage&sortby=t-dateline&sortorder=asc&ticketlabelid=0&departmentid=0&ticketstatusid=0&ticketsearchid=0" title="Sort Ascending">
+                                                                            Date &nbsp;<img src="https://support.bytro.com/themes/admin_default/sortdesc.gif" border="0"/>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="tabletitlerow" width="" align="left" nowrap>
+                                                                        &nbsp;<a href="index.php?_m=tickets&_a=manage&sortby=t-subject&sortorder=asc&ticketlabelid=0&departmentid=0&ticketstatusid=0&ticketsearchid=0" title="Sort Ascending">Subject</a>
+                                                                    </td>
+                                                                    <td class="tabletitlerow" width="130" align="center" nowrap>
+                                                                        &nbsp;<a href="index.php?_m=tickets&_a=manage&sortby=t-lastreplier&sortorder=asc&ticketlabelid=0&departmentid=0&ticketstatusid=0&ticketsearchid=0" title="Sort Ascending">Last Replier</a>
+                                                                    </td>
+                                                                    <td class="tabletitlerow" width="80" align="center" nowrap>
+                                                                        &nbsp;<a href="index.php?_m=tickets&_a=manage&sortby=t-duetime&sortorder=asc&ticketlabelid=0&departmentid=0&ticketstatusid=0&ticketsearchid=0" title="Sort Ascending">Due</a>
+                                                                    </td>
+                                                                    <td class="tabletitlerow" width="100" align="center" nowrap>
+                                                                        &nbsp;<a href="index.php?_m=tickets&_a=manage&sortby=t-lastactivity&sortorder=asc&ticketlabelid=0&departmentid=0&ticketstatusid=0&ticketsearchid=0" title="Sort Ascending">Last Activity</a>
+                                                                    </td>
+                                                                    <td class="tabletitlerow" width="70" align="center" nowrap>
+                                                                        &nbsp;<a href="index.php?_m=tickets&_a=manage&sortby=t-totalreplies&sortorder=asc&ticketlabelid=0&departmentid=0&ticketstatusid=0&ticketsearchid=0" title="Sort Ascending">Replies</a>
+                                                                    </td>
+                                                                    <td class="tabletitlerow" width="100" align="center" nowrap>
+                                                                        &nbsp;<a href="index.php?_m=tickets&_a=manage&sortby=t-ticketstatusid&sortorder=asc&ticketlabelid=0&departmentid=0&ticketstatusid=0&ticketsearchid=0" title="Sort Ascending">Status</a>
+                                                                    </td>
+                                                                    <td class="tabletitlerow" width="130" align="center" nowrap>
+                                                                        &nbsp;<a href="index.php?_m=tickets&_a=manage&sortby=t-ownerstaffid&sortorder=asc&ticketlabelid=0&departmentid=0&ticketstatusid=0&ticketsearchid=0" title="Sort Ascending">Owner</a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr id="trid3327102" style="BACKGROUND-COLOR:;" class="row2" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'row2', '');" onclick="if (document.ticketlist.itemhighlight3327102.value == '1') { this.className = 'rowselect';} else { this.className = 'row2';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3327102' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3327102.value == '0') {document.ticketlist.itemhighlight3327102.value = '1';} else {document.ticketlist.itemhighlight3327102.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3327102' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3327102' target=''>UJH-724190</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">09 Sep 2025 7:57 AM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3327102' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;[Hata Raporu]: haksız yere ban yedim
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">METE HAN APK</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextgreen'>2d9h42m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextorange'>21h7m26s</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">0</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Yunus_Bey</td>
+                                                                </tr>
+                                                                <tr id="trid3326341" style="BACKGROUND-COLOR:#FFECEC;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3326341.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3326341' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3326341.value == '0') {document.ticketlist.itemhighlight3326341.value = '1';} else {document.ticketlist.itemhighlight3326341.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3326341' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3326341' target=''>LGG-249209</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">06 Sep 2025 6:29 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3326341' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;Multiaccounting Ban - Game 10301607
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Adriaandd</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>3d9h28m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">2</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Hurricane V</td>
+                                                                </tr>
+                                                                <tr id="trid3326307" style="BACKGROUND-COLOR:;" class="row2" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'row2', '');" onclick="if (document.ticketlist.itemhighlight3326307.value == '1') { this.className = 'rowselect';} else { this.className = 'row2';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3326307' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3326307.value == '0') {document.ticketlist.itemhighlight3326307.value = '1';} else {document.ticketlist.itemhighlight3326307.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3326307' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3326307' target=''>ZHX-730514</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">06 Sep 2025 4:28 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3326307' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;[Oyun yüklenmiyor]: Haksız hesap kapatma 
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Enes Dinler</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextgreen'>2d9h40m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>3d12h36m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">7</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Yunus_Bey</td>
+                                                                </tr>
+                                                                <tr id="trid3326209" style="BACKGROUND-COLOR:#FFECEC;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3326209.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3326209' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3326209.value == '0') {document.ticketlist.itemhighlight3326209.value = '1';} else {document.ticketlist.itemhighlight3326209.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3326209' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3326209' target=''>IED-818408</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">06 Sep 2025 6:56 AM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3326209' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;Multi-Account
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Cemal54</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>3d17h44m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">1</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Yunus_Bey</td>
+                                                                </tr>
+                                                                <tr id="trid3325976" style="BACKGROUND-COLOR:#FFECEC;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3325976.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3325976' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3325976.value == '0') {document.ticketlist.itemhighlight3325976.value = '1';} else {document.ticketlist.itemhighlight3325976.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3325976' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3325976' target=''>ZHO-426013</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">05 Sep 2025 12:55 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3325976' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;Wolfpacking-Map Banned - 10482558
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">HEZEYANDAYI</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>4d15h53m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">1</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">TheDeatLion</td>
+                                                                </tr>
+                                                                <tr id="trid3325974" style="BACKGROUND-COLOR:#FFECEC;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3325974.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3325974' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3325974.value == '0') {document.ticketlist.itemhighlight3325974.value = '1';} else {document.ticketlist.itemhighlight3325974.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3325974' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3325974' target=''>ESH-136959</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">05 Sep 2025 12:53 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3325974' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;Wolfpacking-Map Banned - 10482558
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Baykalzade</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>4d15h7m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">2</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">TheDeatLion</td>
+                                                                </tr>
+                                                                <tr id="trid3325738" style="BACKGROUND-COLOR:;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '');" onclick="if (document.ticketlist.itemhighlight3325738.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3325738' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3325738.value == '0') {document.ticketlist.itemhighlight3325738.value = '1';} else {document.ticketlist.itemhighlight3325738.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3325738' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3325738' target=''>MTI-562795</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">04 Sep 2025 6:56 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3325738' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;map ban for push on map 10312526
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Pratnicki</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextgreen'>1d10h39m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>1d13h20m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">9</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Crocked Legs</td>
+                                                                </tr>
+                                                                <tr id="trid3324688" style="BACKGROUND-COLOR:#FFECEC;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3324688.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3324688' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3324688.value == '0') {document.ticketlist.itemhighlight3324688.value = '1';} else {document.ticketlist.itemhighlight3324688.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3324688' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3324688' target=''>CPC-155788</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">01 Sep 2025 10:42 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3324688' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;Multi-Account
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Kenichi00</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>8d4h51m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">1</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Yunus_Bey</td>
+                                                                </tr>
+                                                                <tr id="trid3324036" style="BACKGROUND-COLOR:#FFECEC;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3324036.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3324036' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3324036.value == '0') {document.ticketlist.itemhighlight3324036.value = '1';} else {document.ticketlist.itemhighlight3324036.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3324036' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3324036' target=''>ACD-151003</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">31 Aug 2025 4:57 AM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3324036' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;Empuje de cuentas - Eliminación de ronda (10452843)
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">arclaudioalbert...</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>9d11h33m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">4</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Emperador Franc...</td>
+                                                                </tr>
+                                                                <tr id="trid3323681" style="BACKGROUND-COLOR:;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '');" onclick="if (document.ticketlist.itemhighlight3323681.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3323681' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3323681.value == '0') {document.ticketlist.itemhighlight3323681.value = '1';} else {document.ticketlist.itemhighlight3323681.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3323681' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3323681' target=''>GQA-899221</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">30 Aug 2025 2:23 AM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3323681' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;multi-GID10465655,UID97823699main,UID98535184alt
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">nnilser</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor=""></td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>9d8h45m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">0</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">nnilser</td>
+                                                                </tr>
+                                                                <tr id="trid3323232" style="BACKGROUND-COLOR:;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '');" onclick="if (document.ticketlist.itemhighlight3323232.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3323232' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3323232.value == '0') {document.ticketlist.itemhighlight3323232.value = '1';} else {document.ticketlist.itemhighlight3323232.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3323232' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3323232' target=''>KKF-851044</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">28 Aug 2025 5:29 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3323232' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;multiaccount round removal game #10462923
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">laaaaaaaaga</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor=""></td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>12d11h34m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">0</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">laaaaaaaaga</td>
+                                                                </tr>
+                                                                <tr id="trid3317812" style="BACKGROUND-COLOR:;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '');" onclick="if (document.ticketlist.itemhighlight3317812.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3317812' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3317812.value == '0') {document.ticketlist.itemhighlight3317812.value = '1';} else {document.ticketlist.itemhighlight3317812.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3317812' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3317812' target=''>GAM-778745</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">26 Aug 2025 2:26 AM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3317812' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;multi-GID:10457663, UID:86015570main, UID:983966460alt, UID:88278521alt
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">nnilser</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor=""></td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>15d2h33m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">0</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">nnilser</td>
+                                                                </tr>
+                                                                <tr id="trid3317715" style="BACKGROUND-COLOR:#FFECEC;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3317715.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3317715' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3317715.value == '0') {document.ticketlist.itemhighlight3317715.value = '1';} else {document.ticketlist.itemhighlight3317715.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3317715' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3317715' target=''>FSR-352868</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">25 Aug 2025 8:44 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3317715' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;Game Ban [10447858]
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Amphlett1</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>15d7h40m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">3</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Jaegerbaeda</td>
+                                                                </tr>
+                                                                <tr id="trid3317714" style="BACKGROUND-COLOR:#FFECEC;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3317714.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3317714' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3317714.value == '0') {document.ticketlist.itemhighlight3317714.value = '1';} else {document.ticketlist.itemhighlight3317714.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3317714' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3317714' target=''>RTY-523701</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">25 Aug 2025 8:43 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3317714' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;Game Ban [10447858]
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Lord Vader orde...</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>15d8h13m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">2</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Jaegerbaeda</td>
+                                                                </tr>
+                                                                <tr id="trid3317400" style="BACKGROUND-COLOR:;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '');" onclick="if (document.ticketlist.itemhighlight3317400.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3317400' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3317400.value == '0') {document.ticketlist.itemhighlight3317400.value = '1';} else {document.ticketlist.itemhighlight3317400.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3317400' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3317400' target=''>FJP-504898</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">24 Aug 2025 11:47 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3317400' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;appeal on Ticket PNL-834244
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">nnilser</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor=""></td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>14d12h43m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">0</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">nnilser</td>
+                                                                </tr>
+                                                                <tr id="trid3315883" style="BACKGROUND-COLOR:#FFECEC;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3315883.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3315883' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3315883.value == '0') {document.ticketlist.itemhighlight3315883.value = '1';} else {document.ticketlist.itemhighlight3315883.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3315883' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3315883' target=''>ANX-795589</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">21 Aug 2025 5:47 AM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3315883' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;Ban removal for Wolfpacking (10,419,392).
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Mil de Sabade</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>19d22h30m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">1</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">El_Humilde</td>
+                                                                </tr>
+                                                                <tr id="trid3315260" style="BACKGROUND-COLOR:;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '');" onclick="if (document.ticketlist.itemhighlight3315260.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3315260' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3315260.value == '0') {document.ticketlist.itemhighlight3315260.value = '1';} else {document.ticketlist.itemhighlight3315260.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3315260' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3315260' target=''>PXR-563852</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">19 Aug 2025 7:17 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3315260' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;[Tos warning][map 10393981]
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">-Darth--Revan-</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor=""></td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>21d9h46m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">0</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">-Darth--Revan-</td>
+                                                                </tr>
+                                                                <tr id="trid3313831" style="BACKGROUND-COLOR:#FFECEC;" class="row1" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'row1', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3313831.value == '1') { this.className = 'rowselect';} else { this.className = 'row1';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3313831' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3313831.value == '0') {document.ticketlist.itemhighlight3313831.value = '1';} else {document.ticketlist.itemhighlight3313831.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3313831' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3313831' target=''>PZJ-353634</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">15 Aug 2025 11:12 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3313831' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;[Arayüz/Menü Sorunu]: Ben oyuna para yatırıyorum abimle oyuna girdik bize multiplayer dediler
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Serin1234567891...</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>25d5h52m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">1</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">-- Unassigned --</td>
+                                                                </tr>
+                                                                <tr id="trid3308204" style="BACKGROUND-COLOR:#FFECEC;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3308204.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3308204' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3308204.value == '0') {document.ticketlist.itemhighlight3308204.value = '1';} else {document.ticketlist.itemhighlight3308204.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3308204' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3308204' target=''>DDJ-910660</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">01 Aug 2025 9:41 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3308204' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;Using bugs by exploiting game glitches - Map Ban -10380650
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Tactical Ambass...</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>39d5h17m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">1</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">TheDeatLion</td>
+                                                                </tr>
+                                                                <tr id="trid3307504" style="BACKGROUND-COLOR:#FFECEC;" class="row1" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'row1', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3307504.value == '1') { this.className = 'rowselect';} else { this.className = 'row1';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3307504' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3307504.value == '0') {document.ticketlist.itemhighlight3307504.value = '1';} else {document.ticketlist.itemhighlight3307504.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3307504' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3307504' target=''>YBC-343174</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">31 Jul 2025 11:00 AM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3307504' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;[Genel Soru]: Hesabım kalıcı olarak ban yedi haksızlık bu lütfen geri gelsin 
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">RAGNARxLORDBROK</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>40d18h4m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">0</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Muzaffer Eng</td>
+                                                                </tr>
+                                                                <tr id="trid3307436" style="BACKGROUND-COLOR:#FFECEC;" class="row2" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'row2', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3307436.value == '1') { this.className = 'rowselect';} else { this.className = 'row2';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3307436' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3307436.value == '0') {document.ticketlist.itemhighlight3307436.value = '1';} else {document.ticketlist.itemhighlight3307436.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3307436' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3307436' target=''>EWY-273692</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">31 Jul 2025 7:09 AM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3307436' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;[Profil/Web Sitesi Sorunu]: multi accounting
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Unconscionanle ...</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>40d21h55m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">0</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">M11Ler</td>
+                                                                </tr>
+                                                                <tr id="trid3303606" style="BACKGROUND-COLOR:#FFECEC;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3303606.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3303606' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3303606.value == '0') {document.ticketlist.itemhighlight3303606.value = '1';} else {document.ticketlist.itemhighlight3303606.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3303606' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3303606' target=''>CVY-967690</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">23 Jul 2025 4:11 AM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3303606' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;Inappropriate Username – Changed. 
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Resetname049098</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>25d9h52m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">2</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">El_Humilde</td>
+                                                                </tr>
+                                                                <tr id="trid3279952" style="BACKGROUND-COLOR:#FFECEC;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3279952.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3279952' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3279952.value == '0') {document.ticketlist.itemhighlight3279952.value = '1';} else {document.ticketlist.itemhighlight3279952.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3279952' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3279952' target=''>RZT-713209</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">31 May 2025 7:27 AM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3279952' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;ban removal for multiaccounting
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Queen Katya</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>18d11h3m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">2</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">El_Humilde</td>
+                                                                </tr>
+                                                                <tr id="trid3272232" style="BACKGROUND-COLOR:#FFECEC;" class="row1" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'row1', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3272232.value == '1') { this.className = 'rowselect';} else { this.className = 'row1';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3272232' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3272232.value == '0') {document.ticketlist.itemhighlight3272232.value = '1';} else {document.ticketlist.itemhighlight3272232.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3272232' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3272232' target=''>TFV-609140</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">12 May 2025 3:32 AM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3272232' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;[Сообщить об ошибке]: Не могу зайти 
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">user43635301</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>121d1h32m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">0</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#add8e6'>Pending</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">-- Unassigned --</td>
+                                                                </tr>
+                                                                <tr id="trid3252017" style="BACKGROUND-COLOR:#FFECEC;" class="row2" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'row2', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3252017.value == '1') { this.className = 'rowselect';} else { this.className = 'row2';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3252017' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3252017.value == '0') {document.ticketlist.itemhighlight3252017.value = '1';} else {document.ticketlist.itemhighlight3252017.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3252017' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3252017' target=''>WWV-885361</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">28 Mar 2025 3:15 AM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3252017' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>
+                                                                                &nbsp;<img src='https://support.bytro.com/themes/admin_default/icon_paperclip.gif' border='0' align='absmiddle'/>&nbsp;Pushing -multicuentas. Trampa com dos cuentas Es
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">david guzman</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>166d0h49m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">0</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#add8e6'>Pending</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Kaessper</td>
+                                                                </tr>
+                                                                <tr id="trid3251721" style="BACKGROUND-COLOR:#FFECEC;" class="row1" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'row1', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3251721.value == '1') { this.className = 'rowselect';} else { this.className = 'row1';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3251721' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3251721.value == '0') {document.ticketlist.itemhighlight3251721.value = '1';} else {document.ticketlist.itemhighlight3251721.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3251721' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3251721' target=''>RVS-682387</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">27 Mar 2025 4:07 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3251721' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>
+                                                                                &nbsp;<img src='https://support.bytro.com/themes/admin_default/icon_paperclip.gif' border='0' align='absmiddle'/>&nbsp;Reporte de trampas
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Lacuesta Gomela</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>166d11h57m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">0</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#add8e6'>Pending</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Kaessper</td>
+                                                                </tr>
+                                                                <tr id="trid3250145" style="BACKGROUND-COLOR:#FFECEC;" class="row2" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'row2', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3250145.value == '1') { this.className = 'rowselect';} else { this.className = 'row2';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3250145' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3250145.value == '0') {document.ticketlist.itemhighlight3250145.value = '1';} else {document.ticketlist.itemhighlight3250145.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3250145' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3250145' target=''>KTU-762849</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">24 Mar 2025 8:19 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3250145' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;Reporte de movimientos infrecuentes
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Sergio Daniel C...</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>169d7h45m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">0</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#add8e6'>Pending</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Kaessper</td>
+                                                                </tr>
+                                                                <tr id="trid3221243" style="BACKGROUND-COLOR:#FFECEC;" class="rownotes" onmouseover="showHighlight(this);" onmouseout="clearHighlight(this, 'rownotes', '#FFECEC');" onclick="if (document.ticketlist.itemhighlight3221243.value == '1') { this.className = 'rowselect';} else { this.className = 'rownotes';}">
+                                                                    <td align="center" valign="middle">
+                                                                        <input type='checkbox' name='itemid[]' value='3221243' class="swiftcheckbox" onclick="if (document.ticketlist.itemhighlight3221243.value == '0') {document.ticketlist.itemhighlight3221243.value = '1';} else {document.ticketlist.itemhighlight3221243.value = '0';  }displayObject('trmassaction');">
+                                                                        <input type='hidden' name='itemhighlight3221243' value='0'>
+                                                                    </td>
+                                                                    <td colspan="" width="18" align="center" valign="" bgcolor="">
+                                                                        <img src='https://support.bytro.com/themes/admin_default/icon_flagblank.gif' width='18' height='20' border='0'/>
+                                                                    </td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <a href='index.php?_m=tickets&_a=viewticket&ticketid=3221243' target=''>IEX-554179</a>
+                                                                    </td>
+                                                                    <td colspan="" width="160" align="center" valign="" bgcolor="">04 Feb 2025 1:20 PM</td>
+                                                                    <td colspan="" width="" align="left" valign="" bgcolor="">
+                                                                        <div>
+                                                                            <span style="float:right;"></span>
+                                                                            <a href='index.php?_m=tickets&_a=viewticket&ticketid=3221243' target=''>
+                                                                                <img src='https://support.bytro.com/themes/admin_default/icon_ticketnotselfreplied.gif' border='0' align='absmiddle'/>&nbsp;Torneo: Fiebre del oro Batallon - Rage God Destruction
+                                                                            </a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">bruce989</td>
+                                                                    <td colspan="" width="80" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>Overdue</span>
+                                                                    </td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <span class='tickettextred'>46d5h18m</span>
+                                                                    </td>
+                                                                    <td colspan="" width="70" align="center" valign="" bgcolor="">1</td>
+                                                                    <td colspan="" width="100" align="center" valign="" bgcolor="">
+                                                                        <font color='#FFD700'>Open</font>
+                                                                    </td>
+                                                                    <td colspan="" width="130" align="center" valign="" bgcolor="">Luis_Gonzalez</td>
+                                                                </tr>
+                                                                <tr id="trmassaction" style="display: none;">
+                                                                    <td class="row2" align="center" valign="middle" colspan="11" nowrap>
+                                                                        <div style="float: left;">
+                                                                            <select name="ma_options" class="gridmassaction">
+                                                                                <option value="0" selected>-- Options --</option>
+                                                                                <option value="mergetickets">Merge Tickets</option>
+                                                                                <option value="markasdue">Mark Due</option>
+                                                                                <option value="markduein24">Mark Due in 24 Hours</option>
+                                                                                <option value="print">Mass Print</option>
+                                                                                <option value="reply">Mass Reply</option>
+                                                                            </select>
+                                                                            + 
+                                                                        </div>
+                                                                        <div id="maselectcontainer" style="float: left;">
+                                                                            <select name="ma_departmentid" class="gridmassaction" onChange="javascript: updateMassActionDiv();">
+                                                                                <option value="0" selected>-- Move --</option>
+                                                                                <option value="142">s1914_en_bug-beta</option>
+                                                                                <option value="182">GGS_Fraud</option>
+                                                                                <option value="181">GGS_Payment</option>
+                                                                                <option value="53">internal_reporting</option>
+                                                                                <option value="51">s1914_intl_payment</option>
+                                                                                <option value="76">s1914_ticket_escalation</option>
+                                                                                <option value="20">s1914_pt_general</option>
+                                                                                <option value="23">s1914_it_general</option>
+                                                                                <option value="29">s1914_ru_general</option>
+                                                                                <option value="1">s1914_en_general</option>
+                                                                                <option value="40">s1914_tr_general</option>
+                                                                                <option value="18">s1914_nl_general</option>
+                                                                                <option value="6">s1914_fr_general</option>
+                                                                                <option value="4">s1914_de_general</option>
+                                                                                <option value="10">s1914_pl_general</option>
+                                                                                <option value="8">s1914_es_general</option>
+                                                                                <option value="247">ww2_en_reports</option>
+                                                                                <option value="141">ww2_en_bug-beta</option>
+                                                                                <option value="95">ww2_ticket_escalation</option>
+                                                                                <option value="71">ww2_intl_payment</option>
+                                                                                <option value="70">ww2_en_general</option>
+                                                                                <option value="72">ww2_de_general</option>
+                                                                                <option value="78">ww2_es_general</option>
+                                                                                <option value="81">ww2_fr_general</option>
+                                                                                <option value="79">ww2_it_general</option>
+                                                                                <option value="82">ww2_nl_general</option>
+                                                                                <option value="77">ww2_pl_general</option>
+                                                                                <option value="80">ww2_pt_general</option>
+                                                                                <option value="99">ww2_ru_general</option>
+                                                                                <option value="102">ww2_cs_general</option>
+                                                                                <option value="179">ww2_tr_general</option>
+                                                                                <option value="248">s1914_en_reports</option>
+                                                                                <option value="253">bytro_multiaccounting</option>
+                                                                                <option value="254">bytro_tournaments</option>
+                                                                                <option value="256">con_ja_general</option>
+                                                                                <option value="214">s1914_en_chat</option>
+                                                                                <option value="215">s1914_de_chat</option>
+                                                                                <option value="216">s1914_es_chat</option>
+                                                                                <option value="217">s1914_fr_chat</option>
+                                                                                <option value="218">s1914_it_chat</option>
+                                                                                <option value="219">s1914_pl_chat</option>
+                                                                                <option value="220">s1914_pt_chat</option>
+                                                                                <option value="221">s1914_ru_chat</option>
+                                                                                <option value="252">s1914_cs_chat</option>
+                                                                                <option value="188">s1914_customer_support</option>
+                                                                                <option value="189">ww2_customer_support</option>
+                                                                                <option value="222">s1914_tr_chat</option>
+                                                                                <option value="223">s1914_el_chat</option>
+                                                                                <option value="190">con_customer_support</option>
+                                                                                <option value="224">s1914_nl_chat</option>
+                                                                                <option value="202">tgw_Customer_Support</option>
+                                                                                <option value="192">tgw_ticket_escalation</option>
+                                                                                <option value="225">ww2_en_chat</option>
+                                                                                <option value="213">tgw_intl_payment</option>
+                                                                                <option value="226">ww2_de_chat</option>
+                                                                                <option value="193">tgw_de_general</option>
+                                                                                <option value="191">tgw_en_general</option>
+                                                                                <option value="227">ww2_es_chat</option>
+                                                                                <option value="194">tgw_es_general</option>
+                                                                                <option value="228">ww2_fr_chat</option>
+                                                                                <option value="195">tgw_fr_general</option>
+                                                                                <option value="196">tgw_nl_general</option>
+                                                                                <option value="229">ww2_it_chat</option>
+                                                                                <option value="197">tgw_it_general</option>
+                                                                                <option value="230">ww2_pl_chat</option>
+                                                                                <option value="198">tgw_pl_general</option>
+                                                                                <option value="231">ww2_pt_chat</option>
+                                                                                <option value="232">ww2_ru_chat</option>
+                                                                                <option value="199">tgw_pt_general</option>
+                                                                                <option value="233">ww2_tr_chat</option>
+                                                                                <option value="200">tgw_ru_general</option>
+                                                                                <option value="234">ww2_nl_chat</option>
+                                                                                <option value="201">tgw_tr_general</option>
+                                                                                <option value="235">ww2_cs_chat</option>
+                                                                                <option value="236">ww2_ja_chat</option>
+                                                                                <option value="237">tgw_en_chat</option>
+                                                                                <option value="238">tgw_de_chat</option>
+                                                                                <option value="239">tgw_es_chat</option>
+                                                                                <option value="240">tgw_fr_chat</option>
+                                                                                <option value="241">tgw_it_chat</option>
+                                                                                <option value="242">tgw_pl_chat</option>
+                                                                                <option value="243">tgw_pt_chat</option>
+                                                                                <option value="244">tgw_ru_chat</option>
+                                                                                <option value="245">tgw_tr_chat</option>
+                                                                                <option value="246">tgw_nl_chat</option>
+                                                                                <option value="162">con_de_payment</option>
+                                                                                <option value="159">con_en_payment</option>
+                                                                                <option value="69">de_bugtracker</option>
+                                                                                <option value="251">con_ar_general</option>
+                                                                                <option value="249">con_ar_payment</option>
+                                                                                <option value="255">con_ja_payment</option>
+                                                                                <option value="250">con_ar_multi</option>
+                                                                                <option value="160">con_de_general</option>
+                                                                                <option value="161">con_de_multi</option>
+                                                                                <option value="156">con_en_bug-beta</option>
+                                                                                <option value="157">con_en_general</option>
+                                                                                <option value="158">con_en_multi</option>
+                                                                                <option value="167">con_es_general</option>
+                                                                                <option value="169">con_es_multi</option>
+                                                                                <option value="166">con_fr_general</option>
+                                                                                <option value="170">con_fr_multi</option>
+                                                                                <option value="168">con_it_general</option>
+                                                                                <option value="171">con_it_multi</option>
+                                                                                <option value="164">con_pl_general</option>
+                                                                                <option value="165">con_pl_multi</option>
+                                                                                <option value="172">con_ru_general</option>
+                                                                                <option value="173">con_ru_multi</option>
+                                                                                <option value="174">con_tr_general</option>
+                                                                                <option value="175">con_tr_multi</option>
+                                                                                <option value="183">con_pt_general</option>
+                                                                                <option value="184">con_pt_multi</option>
+                                                                                <option value="186">con_cz_general</option>
+                                                                                <option value="187">con_cz_multi</option>
+                                                                            </select>
+                                                                            +
+	
+                                                                            <select name="ma_staffid" class="gridmassaction" onChange="javascript: updateMassActionDiv();">
+                                                                                <option value="" selected>-- Assign To --</option>
+                                                                                <option value="0">-- Unassigned --</option>
+                                                                                <option value="651">_Airborne_</option>
+                                                                                <option value="1127">_Musashi_</option>
+                                                                                <option value="1381">_Roro_</option>
+                                                                                <option value="1317">_xALEJOx_</option>
+                                                                                <option value="1371">-Darth--Revan-</option>
+                                                                                <option value="1313">-ISCO-</option>
+                                                                                <option value="1320">-Oscar de 5de-</option>
+                                                                                <option value="1179">! Hera !</option>
+                                                                                <option value="1115">! MARS !</option>
+                                                                                <option value="1389">..Roronoa..Zoro..</option>
+                                                                                <option value="1275">**Shachi**</option>
+                                                                                <option value="723">*Kacper*</option>
+                                                                                <option value="1287">0043.S181</option>
+                                                                                <option value="1169">1GASPARD2006</option>
+                                                                                <option value="1387">1PzArtBTL2</option>
+                                                                                <option value="1229">6Waves Support</option>
+                                                                                <option value="1190">8nymeria8</option>
+                                                                                <option value="1378">9Soevereinlandia6</option>
+                                                                                <option value="1057">Ace Combat</option>
+                                                                                <option value="1402">Aclains</option>
+                                                                                <option value="1295">Adler Aquilani</option>
+                                                                                <option value="883">Adrian (DOG)</option>
+                                                                                <option value="1124">ADVISOR</option>
+                                                                                <option value="1125">Ajey</option>
+                                                                                <option value="1034">akbayt</option>
+                                                                                <option value="1018">Albi70</option>
+                                                                                <option value="826">Aleksandra</option>
+                                                                                <option value="1264">Alex_CRAZY</option>
+                                                                                <option value="973">Alexandre Sahonet</option>
+                                                                                <option value="410">Alican Sekerefe</option>
+                                                                                <option value="1286">Alkorythm</option>
+                                                                                <option value="1114">alpheratz</option>
+                                                                                <option value="1224">Alyna (6Waves)</option>
+                                                                                <option value="1149">Amal </option>
+                                                                                <option value="1365">Aminster96</option>
+                                                                                <option value="1138">Ana</option>
+                                                                                <option value="1113">AncientWarrior</option>
+                                                                                <option value="1323">Angus</option>
+                                                                                <option value="1214">Anna Terekhina</option>
+                                                                                <option value="1334">Anyoh</option>
+                                                                                <option value="1085">Aquela</option>
+                                                                                <option value="1046">aquilareale66</option>
+                                                                                <option value="1331">Arnavon</option>
+                                                                                <option value="1379">Asfalus</option>
+                                                                                <option value="1175">Atod</option>
+                                                                                <option value="1195">Atomio</option>
+                                                                                <option value="1345">Augustus Sportelli</option>
+                                                                                <option value="1216">Avarita</option>
+                                                                                <option value="1413">BabaJagaPatrzy</option>
+                                                                                <option value="1131">Babil Support</option>
+                                                                                <option value="1142">Babil Support Team</option>
+                                                                                <option value="1404">Bahr_95</option>
+                                                                                <option value="1385">Balakrishnan Nagarajan</option>
+                                                                                <option value="1386">Banjo_</option>
+                                                                                <option value="1139">BaptisedInVodka</option>
+                                                                                <option value="1177">Baron</option>
+                                                                                <option value="873">BigLife5</option>
+                                                                                <option value="1299">Binnsy</option>
+                                                                                <option value="789">Bogdan</option>
+                                                                                <option value="955">boocaspr</option>
+                                                                                <option value="1170">Born-1942</option>
+                                                                                <option value="1220">Brimm</option>
+                                                                                <option value="1336">brution72</option>
+                                                                                <option value="1369">Bubbles</option>
+                                                                                <option value="1199">bublos960</option>
+                                                                                <option value="1244">BULKA C MAKOM</option>
+                                                                                <option value="1118">Byblis</option>
+                                                                                <option value="1360">bytro_nima2</option>
+                                                                                <option value="1141">C L E R I C</option>
+                                                                                <option value="1129">Caesar</option>
+                                                                                <option value="1339">Camellia256</option>
+                                                                                <option value="951">Capitalista8</option>
+                                                                                <option value="1176">Captain_Will</option>
+                                                                                <option value="1292">CaptainBlood</option>
+                                                                                <option value="1027">Cecilia</option>
+                                                                                <option value="1226">Cheng (6Waves)</option>
+                                                                                <option value="1424">Cherry Brina</option>
+                                                                                <option value="1134">Chrisc9378</option>
+                                                                                <option value="689">Christian Holländer</option>
+                                                                                <option value="1185">Cobra</option>
+                                                                                <option value="1120">Conrad</option>
+                                                                                <option value="822">Corvus9</option>
+                                                                                <option value="1180">CoulroPhobia</option>
+                                                                                <option value="818">CptAmerica1701</option>
+                                                                                <option value="1321">Crocked Legs</option>
+                                                                                <option value="1353">Ctonga</option>
+                                                                                <option value="849">Cyril Wolf</option>
+                                                                                <option value="1210">Dani (DOG)</option>
+                                                                                <option value="1384">Daniel Stehlik</option>
+                                                                                <option value="1352">Darko__</option>
+                                                                                <option value="1193">David Westerman</option>
+                                                                                <option value="969">Demonaire</option>
+                                                                                <option value="1241">Dennis Grebe</option>
+                                                                                <option value="1291">DeooX</option>
+                                                                                <option value="1091">Disdain</option>
+                                                                                <option value="1399">Dkfivkdid</option>
+                                                                                <option value="1172">Doc</option>
+                                                                                <option value="1231">Dolfan</option>
+                                                                                <option value="1383">DOMORIAMORAMOR</option>
+                                                                                <option value="1107">DonNebu</option>
+                                                                                <option value="1232">Drauga</option>
+                                                                                <option value="927">Edwylm</option>
+                                                                                <option value="1324">El Historiador</option>
+                                                                                <option value="1303">EL REY LUIS XIV</option>
+                                                                                <option value="1390">El_Humilde</option>
+                                                                                <option value="1233">ElBayo</option>
+                                                                                <option value="850">Ella Bernhardt</option>
+                                                                                <option value="67">Emad Albekord</option>
+                                                                                <option value="1325">EmaJo04</option>
+                                                                                <option value="1391">Emperador Franco I</option>
+                                                                                <option value="1308">EmperorZero0895</option>
+                                                                                <option value="1335">ERICZOCKTLP</option>
+                                                                                <option value="1243">EsTherEmma</option>
+                                                                                <option value="1038">Faifus</option>
+                                                                                <option value="1207">Faisal Nimri</option>
+                                                                                <option value="1137">Faithgr</option>
+                                                                                <option value="620">Felix Schröter</option>
+                                                                                <option value="656">felixjs</option>
+                                                                                <option value="929">Fereyd</option>
+                                                                                <option value="1140">Fernando Mafra</option>
+                                                                                <option value="1204">Field Marshal Dan</option>
+                                                                                <option value="1407">FlukeSkywalker</option>
+                                                                                <option value="871">FREDHAGY</option>
+                                                                                <option value="1269">Frislan14</option>
+                                                                                <option value="1168">funchief</option>
+                                                                                <option value="1332">Gabriel Steinkirch</option>
+                                                                                <option value="848">Gabriela</option>
+                                                                                <option value="845">Garrett (DOG)</option>
+                                                                                <option value="1197">Geden</option>
+                                                                                <option value="1100">GEN.BRENNER</option>
+                                                                                <option value="1039">General isoo</option>
+                                                                                <option value="1042">Gerald321</option>
+                                                                                <option value="1419">giannidog</option>
+                                                                                <option value="1110">gioris</option>
+                                                                                <option value="1092">giulietta27</option>
+                                                                                <option value="1307">Gleb (DOG)</option>
+                                                                                <option value="898">GO-Test</option>
+                                                                                <option value="1411">Goblin</option>
+                                                                                <option value="1410">GodOfArmy</option>
+                                                                                <option value="1322">graafschap</option>
+                                                                                <option value="1276">GreeEfnn</option>
+                                                                                <option value="941">Gugalanna</option>
+                                                                                <option value="1094">Gumba.</option>
+                                                                                <option value="1090">Gunkan</option>
+                                                                                <option value="1354">HABSUG</option>
+                                                                                <option value="1428">Harold Refuerzo</option>
+                                                                                <option value="1188">Hedone_R</option>
+                                                                                <option value="1227">Hirotsugu (6Waves)</option>
+                                                                                <option value="1368">Horstdaspferd</option>
+                                                                                <option value="1429">Hosein-THI</option>
+                                                                                <option value="1393">Hrm Tromp</option>
+                                                                                <option value="1280">Hurricane V</option>
+                                                                                <option value="1246">Husuka</option>
+                                                                                <option value="1300">In time2</option>
+                                                                                <option value="1370">ISkyllaI</option>
+                                                                                <option value="1263">iwiegehtsnet</option>
+                                                                                <option value="1401">Jaegerbaeda</option>
+                                                                                <option value="1235">Jamie</option>
+                                                                                <option value="911">Jan Burkhardt</option>
+                                                                                <option value="1412">Jason182x</option>
+                                                                                <option value="1095">javieras0</option>
+                                                                                <option value="1221">Jeremydesco</option>
+                                                                                <option value="1361">JoaoHostin</option>
+                                                                                <option value="1367">john199213</option>
+                                                                                <option value="1427">Jose Axel Gonzalez Jr</option>
+                                                                                <option value="1359">Juan Barga</option>
+                                                                                <option value="1178">Justin6778</option>
+                                                                                <option value="1430">Justine Ybanez</option>
+                                                                                <option value="1392">Kaessper</option>
+                                                                                <option value="1116">Kaiserin1979</option>
+                                                                                <option value="1358">KamielV</option>
+                                                                                <option value="1403">KaptanTurk.</option>
+                                                                                <option value="1284">Katapliktikos_X</option>
+                                                                                <option value="1372">KayakoTechSupporter231</option>
+                                                                                <option value="1173">Keith (DOG) </option>
+                                                                                <option value="1305">KellyCOW</option>
+                                                                                <option value="1417">Kelvin Low</option>
+                                                                                <option value="1250">Khaael</option>
+                                                                                <option value="1059">Ki-Ros</option>
+                                                                                <option value="1343">King Tutanchamun</option>
+                                                                                <option value="1108">Kiriane</option>
+                                                                                <option value="1333">Kirito5445</option>
+                                                                                <option value="621">Kitti Varga (DOG)</option>
+                                                                                <option value="501">kostas.datsos</option>
+                                                                                <option value="1135">Krastny</option>
+                                                                                <option value="1164">Krazy Kiwi</option>
+                                                                                <option value="1409">laaaaaaaaga</option>
+                                                                                <option value="1283">lacffr60</option>
+                                                                                <option value="1309">Lampedo</option>
+                                                                                <option value="1271">LaysOriginal</option>
+                                                                                <option value="1007">LightningTurk</option>
+                                                                                <option value="792">Linus Otten</option>
+                                                                                <option value="1311">Linus0705</option>
+                                                                                <option value="1260">Lio </option>
+                                                                                <option value="1422">Lisa-marie Rosien</option>
+                                                                                <option value="1218">LJubas13</option>
+                                                                                <option value="1281">llekishvili </option>
+                                                                                <option value="1249">LockStock (DOG)</option>
+                                                                                <option value="762">LORD SEPPE</option>
+                                                                                <option value="1045">LOS LIDERES HD</option>
+                                                                                <option value="1304">Lspon</option>
+                                                                                <option value="1301">Lucius Sportelli</option>
+                                                                                <option value="1364">Luis_Gonzalez</option>
+                                                                                <option value="1146">Lujain </option>
+                                                                                <option value="1136">Lukasz87o</option>
+                                                                                <option value="837">Lunar (DOG)</option>
+                                                                                <option value="743">Luo</option>
+                                                                                <option value="1212">M11Ler</option>
+                                                                                <option value="1122">Maclinwind</option>
+                                                                                <option value="999">MadMike69</option>
+                                                                                <option value="830">Madox</option>
+                                                                                <option value="1058">MagisterTubae25</option>
+                                                                                <option value="900">Majlo</option>
+                                                                                <option value="1191">Majora</option>
+                                                                                <option value="1288">Mal Nar</option>
+                                                                                <option value="880">Malte</option>
+                                                                                <option value="909">Man ser</option>
+                                                                                <option value="1268">manbre03</option>
+                                                                                <option value="923">mantas.k</option>
+                                                                                <option value="1147">Marah</option>
+                                                                                <option value="1337">MarcBytro</option>
+                                                                                <option value="622">Marcell_Dev</option>
+                                                                                <option value="1223">Marco (DOG)</option>
+                                                                                <option value="1346">MarcZX10</option>
+                                                                                <option value="1314">MARECHAL SPINOLA III</option>
+                                                                                <option value="1234">Maresal Kemal</option>
+                                                                                <option value="1356">Maria</option>
+                                                                                <option value="1362">Mario</option>
+                                                                                <option value="1239">Mariscal Nils</option>
+                                                                                <option value="1166">Marshall Utku </option>
+                                                                                <option value="858">Marvin</option>
+                                                                                <option value="1293">Marx4U</option>
+                                                                                <option value="1341">Matthias Kahlert</option>
+                                                                                <option value="841">Max</option>
+                                                                                <option value="847">Max</option>
+                                                                                <option value="1084">Maxim</option>
+                                                                                <option value="1253">MeLarie</option>
+                                                                                <option value="1349">MercytheAngel</option>
+                                                                                <option value="740">Michal Hubert (DOG)</option>
+                                                                                <option value="1128">Michelle</option>
+                                                                                <option value="1373">Mihai</option>
+                                                                                <option value="561">Minishu</option>
+                                                                                <option value="947">Minkyyy</option>
+                                                                                <option value="1397">MitchWeber1989</option>
+                                                                                <option value="1130">Mo Abualruz</option>
+                                                                                <option value="1327">Mohammed</option>
+                                                                                <option value="1119">Mortigan</option>
+                                                                                <option value="1374">MortyPorty</option>
+                                                                                <option value="1395">Mozzarella Master</option>
+                                                                                <option value="1126">Mr_Sickness</option>
+                                                                                <option value="1282">MrPavuk2401</option>
+                                                                                <option value="882">Musti</option>
+                                                                                <option value="1277">Muzaffer Eng</option>
+                                                                                <option value="1174">NameLess®</option>
+                                                                                <option value="1340">Neatrex</option>
+                                                                                <option value="1266">Neleke 88</option>
+                                                                                <option value="1366">neto br</option>
+                                                                                <option value="1259">NewbSniper</option>
+                                                                                <option value="522">Nick</option>
+                                                                                <option value="1408">NicoolaX</option>
+                                                                                <option value="1406">nnilser</option>
+                                                                                <option value="1215">Noah (DOG)</option>
+                                                                                <option value="1205">Noah Sultana</option>
+                                                                                <option value="1296">NotDarks</option>
+                                                                                <option value="783">Occidantix</option>
+                                                                                <option value="1213">Okan Akar</option>
+                                                                                <option value="1238">Old_Man_Mickey</option>
+                                                                                <option value="1000">Oli P. Ashy</option>
+                                                                                <option value="1376">on11skis</option>
+                                                                                <option value="75">Opulon</option>
+                                                                                <option value="1316">Orcishpapa</option>
+                                                                                <option value="1400">Orion Ensis</option>
+                                                                                <option value="1181">Orkhan Elchuev</option>
+                                                                                <option value="1086">OutKast1</option>
+                                                                                <option value="1294">Outlaw828 </option>
+                                                                                <option value="1318">Owl_of_Wisdom</option>
+                                                                                <option value="1247">Pacificador.</option>
+                                                                                <option value="1315">Paul Dunkel</option>
+                                                                                <option value="1183">Paul Rubio</option>
+                                                                                <option value="1414">Pelobates</option>
+                                                                                <option value="1357">Persian Warrior s</option>
+                                                                                <option value="1019">Petar</option>
+                                                                                <option value="877">Peter Cukierski</option>
+                                                                                <option value="943">petruz</option>
+                                                                                <option value="1073">PhihP</option>
+                                                                                <option value="1298">Pinguzard</option>
+                                                                                <option value="1416">PixelCap</option>
+                                                                                <option value="825">Pretoriano Nero</option>
+                                                                                <option value="831">PrinceofHonor</option>
+                                                                                <option value="1312">PtrckDckr</option>
+                                                                                <option value="1248">QABytro</option>
+                                                                                <option value="1388">QuiХ</option>
+                                                                                <option value="960">R ADLER</option>
+                                                                                <option value="1167">Rabazallo [BR]</option>
+                                                                                <option value="1328">Rados</option>
+                                                                                <option value="631">Rana71</option>
+                                                                                <option value="1297">Ratatøskr</option>
+                                                                                <option value="1285">RE TORK</option>
+                                                                                <option value="1338">RestingPhantom</option>
+                                                                                <option value="834">Robner</option>
+                                                                                <option value="1080">Rocky1071</option>
+                                                                                <option value="1256">RRSouza</option>
+                                                                                <option value="1423">Ruben Floresca</option>
+                                                                                <option value="1278">Ruguy18</option>
+                                                                                <option value="795">Sabaton08</option>
+                                                                                <option value="1001">Sad4razam</option>
+                                                                                <option value="1151">Saja</option>
+                                                                                <option value="1066">Salgueiroj</option>
+                                                                                <option value="1152">Sally</option>
+                                                                                <option value="1290">Samourai_44</option>
+                                                                                <option value="879">Sara (DOG)</option>
+                                                                                <option value="1425">Sarah Reyes</option>
+                                                                                <option value="1222">Sassi94</option>
+                                                                                <option value="1162">sbates23</option>
+                                                                                <option value="1186">scieLabs</option>
+                                                                                <option value="165">Sebastian Teuber</option>
+                                                                                <option value="1070">Sebastian1778</option>
+                                                                                <option value="1089">Senf711</option>
+                                                                                <option value="1123">Sergio</option>
+                                                                                <option value="1377">Sethogrande</option>
+                                                                                <option value="1270">Shadoster</option>
+                                                                                <option value="1289">ShadowMaster1337</option>
+                                                                                <option value="1144">Shams</option>
+                                                                                <option value="1351">Shandalar</option>
+                                                                                <option value="771">Shaun Camilleri (DOG)</option>
+                                                                                <option value="1347">ShootyShootyBang</option>
+                                                                                <option value="308">Silvio</option>
+                                                                                <option value="1355">Simon</option>
+                                                                                <option value="488">Simon Dotschuweit</option>
+                                                                                <option value="781">Simon H.</option>
+                                                                                <option value="1344">Simon911</option>
+                                                                                <option value="1208">Slav Senkiv</option>
+                                                                                <option value="1237">SleepyKiti</option>
+                                                                                <option value="1071">Slyx</option>
+                                                                                <option value="1157">Sonia</option>
+                                                                                <option value="245">sonja1976</option>
+                                                                                <option value="1196">Stannis Baratheon</option>
+                                                                                <option value="1302">Starmaiden</option>
+                                                                                <option value="13">Stefan Artmann</option>
+                                                                                <option value="1279">StormTrooper</option>
+                                                                                <option value="1261">support-stech</option>
+                                                                                <option value="1">Supremacy 1914</option>
+                                                                                <option value="1236">Svalinn</option>
+                                                                                <option value="1217">Svalinn2</option>
+                                                                                <option value="859">Sztyma</option>
+                                                                                <option value="1225">Takashi (6Waves)</option>
+                                                                                <option value="1228">Takayuki (6Waves)</option>
+                                                                                <option value="1088">Talonre</option>
+                                                                                <option value="1350">Tano_410</option>
+                                                                                <option value="1265">Tequila</option>
+                                                                                <option value="1209">Tesla</option>
+                                                                                <option value="897">test</option>
+                                                                                <option value="1262">Test Account</option>
+                                                                                <option value="797">testaccount</option>
+                                                                                <option value="1396">Th3Pr0fess0r</option>
+                                                                                <option value="1258">The Upbringer</option>
+                                                                                <option value="1421">The Upbringer</option>
+                                                                                <option value="1342">TheDeatLion</option>
+                                                                                <option value="808">Thobren</option>
+                                                                                <option value="971">Thor (DOG)</option>
+                                                                                <option value="16">Tobias Axenbeck</option>
+                                                                                <option value="15">Tobias Kringe</option>
+                                                                                <option value="946">TOM EYE</option>
+                                                                                <option value="1251">TomTomG9</option>
+                                                                                <option value="1415">Tournament Bot</option>
+                                                                                <option value="1375">tsigmon73</option>
+                                                                                <option value="1043">ttroutt</option>
+                                                                                <option value="1272">TygrysPoskramiacz</option>
+                                                                                <option value="1267">Valkyrie Brynhild</option>
+                                                                                <option value="1398">Vicentecarrizales</option>
+                                                                                <option value="1189">Viktor</option>
+                                                                                <option value="1099">Vissby</option>
+                                                                                <option value="1363">vqtw</option>
+                                                                                <option value="1319">Vrihedd®</option>
+                                                                                <option value="1184">WarhammerOdinsson</option>
+                                                                                <option value="1310">wasali2</option>
+                                                                                <option value="1420">Will Treaty</option>
+                                                                                <option value="786">William Cachia (DOG)</option>
+                                                                                <option value="938">Wisehan</option>
+                                                                                <option value="1394">Wodry</option>
+                                                                                <option value="1072">Wüstenrabe</option>
+                                                                                <option value="150">Xyrality Admin</option>
+                                                                                <option value="588">Yak</option>
+                                                                                <option value="1171">Yoda Sky</option>
+                                                                                <option value="1240">yoee</option>
+                                                                                <option value="1096">Yugy</option>
+                                                                                <option value="1426">Yuji Uno</option>
+                                                                                <option value="1273">Yunus_Bey</option>
+                                                                                <option value="1306">YuraZheva</option>
+                                                                                <option value="1187">yzjqx</option>
+                                                                                <option value="1153">Zaineh</option>
+                                                                                <option value="1405">ZeeerkaX</option>
+                                                                                <option value="399">Zhucov V</option>
+                                                                                <option value="914">Zundert The Terrible</option>
+                                                                            </select>
+                                                                            + 
+	
+                                                                            <select name="ma_ticketstatusid" class="gridmassaction" onChange="javascript: updateMassActionDiv();">
+                                                                                <option value="0" selected>-- Status --</option>
+                                                                                <option value="1" style="color:#FFD700">Open</option>
+                                                                                <option value="4" style="color:#add8e6">Pending</option>
+                                                                                <option value="2" style="color:#8BB467">On Hold</option>
+                                                                                <option value="3" style="color:#e34234">Closed</option>
+                                                                            </select>
+                                                                            + 
+                                                                        </div>
+                                                                        <div style="float: left;">
+                                                                            <select name="ma_priorityid" class="gridmassaction">
+                                                                                <option value="0" selected>-- Priority --</option>
+                                                                                <option value="1" style="background:;color:#8A8A8A">Low</option>
+                                                                                <option value="2" style="background:;color:#000000">Medium</option>
+                                                                                <option value="3" style="background:;color:#F07D18">High</option>
+                                                                                <option value="4" style="background:;color:#E826C6">Urgent</option>
+                                                                                <option value="5" style="background:;color:#E06161">Emergency</option>
+                                                                                <option value="6" style="background:#FFF6F5;color:#FF0000">Critical</option>
+                                                                            </select>
+                                                                            + 
+	
+                                                                            <select name="ma_flagtype" class="swiftselect">
+                                                                                <option value="" selected>-- No Label --</option>
+                                                                                <option value="l_29" style="background: #FFC160; color: #FFFFFF;">2109601</option>
+                                                                                <option value="l_45" style="background: #FFC160; color: #FFFFFF;">36897978</option>
+                                                                                <option value="l_28" style="background: #FFC160; color: #FFFFFF;">closed</option>
+                                                                                <option value="l_34" style="background: #FFC160; color: #FFFFFF;">closed</option>
+                                                                                <option value="l_57" style="background: #FFC160; color: #FFFFFF;">crocked legs</option>
+                                                                                <option value="l_6" style="background: #FFC160; color: #FFFFFF;">development</option>
+                                                                                <option value="l_40" style="background: #FFC160; color: #FFFFFF;">dolphin</option>
+                                                                                <option value="l_51" style="background: #FFC160; color: #FFFFFF;">Evil_king 14</option>
+                                                                                <option value="l_36" style="background: #FFC160; color: #FFFFFF;">Full Name</option>
+                                                                                <option value="l_21" style="background: #FFC160; color: #FFFFFF;">Gobe</option>
+                                                                                <option value="l_17" style="background: #FFC160; color: #FFFFFF;">green</option>
+                                                                                <option value="l_44" style="background: #FFC160; color: #FFFFFF;">Green Flag</option>
+                                                                                <option value="l_35" style="background: #FFC160; color: #FFFFFF;">GYM-959535</option>
+                                                                                <option value="l_39" style="background: #FFC160; color: #FFFFFF;">hakanakyol6767@gmail.com</option>
+                                                                                <option value="l_7" style="background: #FFC160; color: #FFFFFF;">it_dev</option>
+                                                                                <option value="l_8" style="background: #FFC160; color: #FFFFFF;">it_multi</option>
+                                                                                <option value="l_18" style="background: #FFC160; color: #FFFFFF;">kongo</option>
+                                                                                <option value="l_20" style="background: #FFC160; color: #FFFFFF;">luke</option>
+                                                                                <option value="l_33" style="background: #FFC160; color: #FFFFFF;">Manser</option>
+                                                                                <option value="l_42" style="background: #FFC160; color: #FFFFFF;">Mass Action</option>
+                                                                                <option value="l_52" style="background: #FFC160; color: #FFFFFF;">MCB-901236</option>
+                                                                                <option value="l_25" style="background: #FFC160; color: #FFFFFF;">Mihail</option>
+                                                                                <option value="l_56" style="background: #FFC160; color: #FFFFFF;">neto br</option>
+                                                                                <option value="l_41" style="background: #FFC160; color: #FFFFFF;">none</option>
+                                                                                <option value="l_38" style="background: #FFC160; color: #FFFFFF;">NUF-747280</option>
+                                                                                <option value="l_27" style="background: #FFC160; color: #FFFFFF;">Overdue</option>
+                                                                                <option value="l_1" style="background: #FFC160; color: #FFFFFF;">Payment</option>
+                                                                                <option value="l_23" style="background: #FFC160; color: #FFFFFF;">payment</option>
+                                                                                <option value="l_30" style="background: #FFC160; color: #FFFFFF;">perma banned DE</option>
+                                                                                <option value="l_46" style="background: #FFC160; color: #FFFFFF;">player</option>
+                                                                                <option value="l_50" style="background: #FFC160; color: #FFFFFF;">Priority</option>
+                                                                                <option value="l_37" style="background: #FFC160; color: #FFFFFF;">red</option>
+                                                                                <option value="l_47" style="background: #FFC160; color: #FFFFFF;">reported</option>
+                                                                                <option value="l_15" style="background: #FFC160; color: #FFFFFF;">reported image</option>
+                                                                                <option value="l_32" style="background: #FFC160; color: #FFFFFF;">rmb</option>
+                                                                                <option value="l_54" style="background: #FFC160; color: #FFFFFF;">RNX-331364</option>
+                                                                                <option value="l_26" style="background: #FFC160; color: #FFFFFF;">Seyhbedreddin</option>
+                                                                                <option value="l_43" style="background: #FFC160; color: #FFFFFF;">supremacy</option>
+                                                                                <option value="l_24" style="background: #FFC160; color: #FFFFFF;">Test</option>
+                                                                                <option value="l_55" style="background: #FFC160; color: #FFFFFF;">TyronKR</option>
+                                                                                <option value="l_53" style="background: #FFC160; color: #FFFFFF;">VCM-416099</option>
+                                                                                <option value="l_19" style="background: #FFC160; color: #FFFFFF;">wilhand</option>
+                                                                                <option value="l_16" style="background: #FFC160; color: #FFFFFF;">XxEllxX</option>
+                                                                                <option value="l_49" style="background: #FFC160; color: #FFFFFF;">закрыто</option>
+                                                                                <option value="l_48" style="background: #FFC160; color: #FFFFFF;">Холодная война Empire RP</option>
+                                                                                <option value="">-- No Flag --</option>
+                                                                                <option value="f_1" style="background: #A5587C; color: #FFFFFF;">Purple Flag</option>
+                                                                                <option value="f_5" style="background: #CF5D60; color: #FFFFFF;">Red Flag</option>
+                                                                                <option value="f_2" style="background: #FF8C5A; color: #FFFFFF;">Orange Flag</option>
+                                                                                <option value="f_4" style="background: #FFC160; color: #FFFFFF;">Yellow Flag</option>
+                                                                                <option value="f_6" style="background: #5C83B4; color: #FFFFFF;">Blue Flag</option>
+                                                                                <option value="f_3" style="background: #8BB467; color: #FFFFFF;">Green Flag</option>
+                                                                                <option value="f_0" style="BACKGROUND: #CCCCCC; COLOR: #FFFFFF;">Clear Flag</option>
+                                                                            </select>
+                                                                            <input type="submit" id="gridsubmit1" name="submitbtn" value="Go" class="swiftmabutton">
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <tr>
+                                                <td>
+                                                    <img src="https://support.bytro.com/themes/admin_default/space.gif" width="1" height="6"/>
+                                            </tr>
+                                        </td>
+                                    <tr>
+                                        <td>
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr valign="top">
+                                                    <td align="left">
+                                                        <table border="0" cellpadding="0" cellspacing="1" class="tborder">
+                                                            <tr>
+                                                                <td class="highlightpage">Page 1 of 1</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                    </tr>
+                            </td>
+                        </tr>
+                </td>
+        </table>
+        <input type="hidden" name="_m" value="tickets"/>
+        <input type="hidden" name="_a" value="manage"/>
+</form></td></tr>
+<tr height="4">
+    <td colspan="2">
+        <img src="https://support.bytro.com/themes/admin_default/space.gif" height="4" width="1">
+    </td>
+</tr>
+</table></td>
+<td width="8" valign="top" align="left">
+    <img src="https://support.bytro.com/themes/admin_default/space.gif" width="8" height="1">
+</td>
+</tr></table></td></tr>
+<tr>
+    <td>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td height="5" bgcolor="#E1E1E1">
+                    <img src="https://support.bytro.com/themes/admin_default/space.gif" width="1" height="5">
+                </td>
+            </tr>
+            <tr>
+                <td height="8" bgcolor="#707070">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                        <tr>
+                            <td align="left" valign="middle">
+                                <span class="smalltext">
+                                    &nbsp;<a href="index.php?_m=core&_a=dashboard" id="lightgray">Home</a>
+                                </span>
+                                <img src="https://support.bytro.com/cron/index.php" width="1" height="1"/>
+                            </td>
+                            <td align="right">
+                                <span class="smalltext">
+                                    <font color="#EFEFEF">Copyright &copy;2001-2025 Kayako Infotech Ltd.</font>
+                                </span>
+                            </td>
+                            <td width="1" align="right">
+                                <img src="https://support.bytro.com/themes/admin_default/space.gif" width="1" height="15">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="2" bgcolor="#4E4E4E">
+                    <img src="https://support.bytro.com/themes/admin_default/space.gif" width="1" height="2">
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+</table></center></body></html>
